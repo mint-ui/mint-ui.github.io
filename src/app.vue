@@ -20,7 +20,7 @@
         <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">基于 vue.js 的移动端 UI 框架</p>
         <div class="page-home-buttons">
           <a href="/docs" class="page-home-button" v-show="descAnimateReady" transition="enter">开始使用</a>
-          <a href="/mint-ui/#!/Demos" class="page-home-button" v-show="descAnimateReady" transition="enter">查看示例</a>
+          <a href="/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter">查看示例</a>
         </div>
         <div class="page-home-gitbtn">
           <iframe src="https://ghbtns.com/github-btn.html?user=mint-ui&repo=mint-ui&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter" v-el:test></iframe>
@@ -251,6 +251,8 @@
         }
 
         @descendent button {
+          padding: 10px 30px;
+          font-size: 2.2rem;
           &:first-child {
             margin-right: 8%;
           }
@@ -271,7 +273,7 @@
           link: '/docs'
         }, {
           name: 'Demos',
-          link: '/mint-ui/#!/Demos'
+          link: '/mint-ui'
         }, {
           name: 'Github',
           link: 'https://github.com/mint-ui/mint-ui'
