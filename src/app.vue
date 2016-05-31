@@ -13,21 +13,25 @@
     <div class="page-home-content" :class="{ 'page-home-content--drop': menuVisible }">
       <div class="page-home-jumbotron">
         <div class="page-home-logo" :class="{ 'logo-animate': logoAnimateReady }">
-          <img src="http://fuss10.elemecdn.com/0/74/990b3ea94b25f060856452d4e0556jpeg.jpeg" alt="">
-          <p class="page-home-title">mint-ui</p>
+          <img src="./assets/mint-ui.svg" alt="">
+          <p class="page-home-title">Mint UI</p>
           <p></p>
         </div>
-        <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">基于 vue.js 的移动端 UI 框架</p>
+        <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">基于 vue.js 的移动端组件库</p>
         <div class="page-home-buttons">
           <a href="/docs" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank">开始使用</a>
           <a href="/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank">查看示例</a>
         </div>
         <div class="page-home-gitbtn">
-          <iframe src="https://ghbtns.com/github-btn.html?user=mint-ui&repo=mint-ui&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter" v-el:test></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=mint-ui&repo=mint-ui&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
           <iframe src="https://ghbtns.com/github-btn.html?user=mint-ui&repo=mint-ui&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
         </div>
       </div>
-
+      <ul>
+        <li>mint-ui 包含丰富的 CSS 和 JS 组件，能够满足日常的移动端开发需要。通过它，可以快速构建出风格统一的页面，提升开发效率。</li>
+        <li>考虑到移动端的性能门槛，mint-ui 采用 CSS3 处理各种动效，避免浏览器进行不必要的重绘和重排，从而使用户获得流畅顺滑的体验。</li>
+        <li></li>
+      </ul>
     </div>
   </section>
 </template>
@@ -61,8 +65,8 @@
   @component-namespace page {
     @component home {
       @descendent jumbotron {
-        background: linear-gradient(to right, #248cff, #6cb5ff, #248cff);
-        padding-bottom: 100px;
+        background-color: #26a2ff;
+        padding-bottom: 50px;
         position: relative;
         text-align: center;
       }
@@ -93,20 +97,16 @@
       }
 
       @descendent logo {
-        padding-top: 70px;
+        height: 314px;
+        padding-top: 40px;
         opacity: 0;
         &.logo-animate {
            animation: enter .5s forwards;
-        }
-        img {
-          filter: drop-shadow(3px 3px 6px rgba(209, 255, 110, 0.8));
         }
       }
 
       @descendent title {
         font-size: 6rem;
-        font-weight: 100;
-        letter-spacing: 0.12em;
         color: #fff;
       }
 
@@ -121,7 +121,7 @@
       }
 
       @descendent buttons {
-        margin-top: 80px;
+        margin-top: 60px;
         height: 46px;
       }
 
@@ -157,7 +157,6 @@
     @component-namespace page {
       @component home {
         @descendent jumbotron {
-          background: linear-gradient(to right, #26a2ff, #26a2ff);
           padding-bottom: 100px;
           position: relative;
         }
@@ -288,7 +287,7 @@
     compiled() {
       this.isMobile = document.body.clientWidth <= 500;
       let logoImage = new Image();
-      logoImage.src = 'http://fuss10.elemecdn.com/0/74/990b3ea94b25f060856452d4e0556jpeg.jpeg';
+      logoImage.src = 'src/assets/mint-ui.svg';
       logoImage.addEventListener('load', () => {
         this.logoAnimateReady = true;
         setTimeout(() => {
