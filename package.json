@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "cooking watch",
     "dist": "cooking build -p",
-    "deploy": "cooking build --no-color"
+    "deploy": "cooking build -p && gh-pages -d dist -b master"
   },
   "repository": {
     "type": "git",

@@ -219,10 +219,10 @@
       return {
         navs: [{
           name: 'Docs',
-          link: '/#!/docs'
+          link: '/docs'
         }, {
           name: 'Demos',
-          link: '/#!/Demos'
+          link: '/mint-ui/#!/Demos'
         }, {
           name: 'Github',
           link: 'https://github.com/mint-ui/mint-ui'
