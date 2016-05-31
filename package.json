@@ -1,0 +1,26 @@
+{
+  "name": "mint-ui.github.io",
+  "version": "0.0.0",
+  "description": "Landing page for mint-ui",
+  "private": false,
+  "keywords": [],
+  "scripts": {
+    "dev": "cooking watch",
+    "dist": "cooking build -p",
+    "deploy": "cooking build --no-color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+github.com/mint-ui/mint-ui.github.io.git"
+  },
+  "homepage": "github.com/mint-ui/mint-ui.github.io#readme",
+  "bugs": {
+    "url": "github.com/mint-ui/mint-ui.github.io/issues"
+  },
+  "author": "elemefe",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "my-local-ip": "^1.0.0"
+  }
+}
