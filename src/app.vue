@@ -10,14 +10,24 @@
         <a :href="item.link" target="_blank">{{ item.name }}</a>
       </li>
     </ul>
-    <div class="page-home-jumbotron" :class="{ 'page-home-jumbotron--drop': menuVisible }">
-      <div class="page-home-logo" :class="{ 'logo-animate': logoAnimateReady }">
-        <img src="http://fuss10.elemecdn.com/0/74/990b3ea94b25f060856452d4e0556jpeg.jpeg" alt="">
-        <!--<img src="http://fuss10.elemecdn.com/b/18/0678e57cb1b226c04888e7f244c20jpeg.jpeg" alt="">-->
-        <p class="page-home-title">mint-ui</p>
-        <p></p>
+    <div class="page-home-content" :class="{ 'page-home-content--drop': menuVisible }">
+      <div class="page-home-jumbotron">
+        <div class="page-home-logo" :class="{ 'logo-animate': logoAnimateReady }">
+          <img src="http://fuss10.elemecdn.com/0/74/990b3ea94b25f060856452d4e0556jpeg.jpeg" alt="">
+          <p class="page-home-title">mint-ui</p>
+          <p></p>
+        </div>
+        <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">基于 vue.js 的移动端 UI 框架</p>
+        <div class="page-home-buttons">
+          <a href="/docs" class="page-home-button" v-show="descAnimateReady" transition="enter">开始使用</a>
+          <a href="/mint-ui/#!/Demos" class="page-home-button" v-show="descAnimateReady" transition="enter">查看示例</a>
+        </div>
+        <div class="page-home-gitbtn">
+          <iframe src="https://ghbtns.com/github-btn.html?user=mint-ui&repo=mint-ui&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter" v-el:test></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=mint-ui&repo=mint-ui&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
+        </div>
       </div>
-      <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">基于 vue.js 的移动端 UI 框架</p>
+
     </div>
   </section>
 </template>
@@ -35,6 +45,15 @@
     }
   }
 
+  .enter-transition {
+    transition: opacity 2s, color .2s, background-color .2s;
+  }
+
+  .enter-enter,
+  .enter-leave {
+    opacity: 0;
+  }
+
   html {
     font-size: 62.5%;
   }
@@ -45,6 +64,7 @@
         background: linear-gradient(to right, #248cff, #6cb5ff, #248cff);
         padding-bottom: 100px;
         position: relative;
+        text-align: center;
       }
 
       @descendent header {
@@ -74,7 +94,6 @@
 
       @descendent logo {
         padding-top: 70px;
-        text-align: center;
         opacity: 0;
         &.logo-animate {
            animation: enter .5s forwards;
@@ -93,13 +112,38 @@
 
       @descendent desc {
         margin-top: 10px;
-        text-align: center;
         font-size: 4rem;
         color: #fff;
         opacity: 0;
         &.logo-animate {
           animation: enter .5s forwards;
         }
+      }
+
+      @descendent buttons {
+        margin-top: 80px;
+        height: 46px;
+      }
+
+      @descendent button {
+        display: inline-block;
+        color: #fff;
+        padding: 10px 40px;
+        border: solid 2px #fff;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        &:first-child {
+          margin-right: 40px;
+        }
+        &:hover {
+          color: #248cff;
+          background-color: #fff;
+        }
+      }
+
+      @descendent gitbtn {
+        height: 25px;
+        margin-top: 20px;
       }
     }
   }
@@ -192,7 +236,9 @@
           }
         }
 
-        @descendent jumbotron {
+        @descendent content {
+          position: absolute;
+          width: 100%;
           transform: translate3d(0, -150px, 0);
           transition: .2s;
           @modifier drop {
@@ -204,7 +250,10 @@
           letter-spacing: normal;
         }
 
-        @descendent desc {
+        @descendent button {
+          &:first-child {
+            margin-right: 8%;
+          }
         }
       }
     }
@@ -238,7 +287,6 @@
       this.isMobile = document.body.clientWidth <= 500;
       let logoImage = new Image();
       logoImage.src = 'http://fuss10.elemecdn.com/0/74/990b3ea94b25f060856452d4e0556jpeg.jpeg';
-//      logoImage.src = 'http://fuss10.elemecdn.com/b/18/0678e57cb1b226c04888e7f244c20jpeg.jpeg';
       logoImage.addEventListener('load', () => {
         this.logoAnimateReady = true;
         setTimeout(() => {
