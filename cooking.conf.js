@@ -4,8 +4,7 @@ var cooking = require('cooking');
 cooking.set({
   use: 'vue',
   entry: {
-    app: './src/main.js',
-    vendor: ['vue']
+    app: './src/main.js'
   },
   dist: './dist',
   template: './src/index.tpl',
@@ -20,8 +19,6 @@ cooking.set({
   // production
   clean: true,
   hash: true,
-  sourceMap: true,
-  chunk: 'vendor',
   publicPath: '/',
   assetsPath: 'static',
   urlLoaderLimit: 10000,
@@ -31,6 +28,10 @@ cooking.set({
 
 cooking.add('resolve.alias', {
   'src': path.join(__dirname, 'src')
+});
+
+cooking.add('externals', {
+  'vue': 'Vue'
 });
 
 module.exports = cooking.resolve();
