@@ -8,5 +8,6 @@
   <body>
     <app></app>
     <!-- built files will be auto injected -->
+    <script src="//github.elemecdn.com/uglifyjs!vuejs/vue/v1.0.24/dist/vue.js"></script>
   </body>
 </html>
