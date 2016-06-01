@@ -18,31 +18,8 @@
         </div>
       </div>
 
-      <div class="page-home-show" :style="{ 'width': smallScreen ? '90%' : '1050px' }">
-        <ul class="page-home-feature" :style="{ 'width': smallScreen ? '100%' : '650px' }">
-          <li>
-            <i class="iconfont icon-zujian"></i>
-            <span>Mint UI 包含丰富的 CSS 和 JS 组件，能够满足日常的移动端开发需要。通过它，可以快速构建出风格统一的页面，提升开发效率。</span>
-          </li>
-          <li>
-            <i class="iconfont icon-anxufufei"></i>
-            <span>真正意义上的按需加载组件。可以只加载声明过的组件及其样式文件，无需再纠结文件体积过大。</span>
-          </li>
-          <li>
-            <i class="iconfont icon-xingnengtongji"></i>
-            <span>考虑到移动端的性能门槛，Mint UI 采用 CSS3 处理各种动效，避免浏览器进行不必要的重绘和重排，从而使用户获得流畅顺滑的体验。</span>
-          </li>
-          <li>
-            <i class="iconfont icon-shiliangzhinengduixiang9"></i>
-            <span>依托 Vue.js 高效的组件化方案，Mint UI 做到了轻量化。即使全部引入，压缩后的文件体积也仅有 100+ K。</span>
-          </li>
-        </ul>
-        <div class="page-home-phone" v-if="!smallScreen">
-          <iframe src="//mint-ui.github.io/mint-ui" frameborder="0"></iframe>
-        </div>
-      </div>
-
-      <div class="page-home-start">
+      <p class="page-home-sector">快速开始</p>
+      <div class="page-home-start" :style="{ 'width': smallScreen ? '90%' : '650px' }">
         <code>
           <span class="page-home-comment">// 引入全部组件</span>
           <span>import Vue from 'vue';</span>
@@ -55,6 +32,38 @@
           <span>Vue.component(Cell.name, Cell);</span>
           <span>Vue.component(Checklist.name, Checklist);</span>
         </code>
+      </div>
+
+      <p class="page-home-sector page-home-sector--dark">特性介绍</p>
+      <div class="page-home-show">
+        <div class="page-home-left">
+          <ul class="page-home-feature" :style="{ 'width': smallScreen ? '100%' : '650px' }">
+            <li>
+              <i class="iconfont icon-zujian"></i>
+              <span>Mint UI 包含丰富的 CSS 和 JS 组件，能够满足日常的移动端开发需要。通过它，可以快速构建出风格统一的页面，提升开发效率。</span>
+            </li>
+            <li>
+              <i class="iconfont icon-anxufufei"></i>
+              <span>真正意义上的按需加载组件。可以只加载声明过的组件及其样式文件，无需再纠结文件体积过大。</span>
+            </li>
+            <li>
+              <i class="iconfont icon-xingnengtongji"></i>
+              <span>考虑到移动端的性能门槛，Mint UI 采用 CSS3 处理各种动效，避免浏览器进行不必要的重绘和重排，从而使用户获得流畅顺滑的体验。</span>
+            </li>
+            <li>
+              <i class="iconfont icon-shiliangzhinengduixiang9"></i>
+              <span>依托 Vue.js 高效的组件化方案，Mint UI 做到了轻量化。即使全部引入，压缩后的文件体积也仅有 100+ K。</span>
+            </li>
+          </ul>
+
+          <div class="page-home-qrcode">
+            <img src="./assets/qrcode.svg" alt="">
+          </div>
+        </div>
+
+        <div class="page-home-phone" v-if="!smallScreen">
+          <iframe src="//mint-ui.github.io/mint-ui" frameborder="0"></iframe>
+        </div>
       </div>
 
       <footer class="page-home-footer">
@@ -153,13 +162,30 @@
         margin-top: 20px;
       }
 
+      @descendent qrcode {
+        text-align: center;
+        margin-top: 40px;
+        img {
+          width: 250px;
+        }
+      }
+
+      @descendent sector {
+        margin-top: 40px;
+        font-size: 20px;
+        color: #18B971;
+        text-align: center;
+        @modifier dark {
+          padding-top: 20px;
+        }
+      }
+
       @descendent start {
-        width: 500px;
-        margin: 80px auto 0;
-        background-color: #0b210f;
+        margin: 10px auto 60px;
+        background-color: #f8f8f8;
         border-radius: 8px;
+        border: solid 1px #ddd;
         padding: 15px 15px;
-        box-shadow: 1px 1px 10px 1px #999;
         code {
           display: block;
           &:first-child {
@@ -168,7 +194,7 @@
         }
         span {
           display: block;
-          color: #d8fbe8;
+          color: #53b997;
           line-height: 20px;
           &.page-home-comment {
             color: #719fad;
@@ -177,10 +203,15 @@
       }
 
       @descendent show {
-        margin: 20px auto 0;
+        margin: 0 auto;
+        padding: 20px 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+      }
+
+      @descendent left {
+        margin-right: 40px;
       }
 
       @descendent feature {
@@ -195,7 +226,7 @@
         i {
           vertical-align: middle;
           color: #18B971;
-          font-size: 120px;
+          font-size: 80px;
           display: -webkit-box;
         }
         span {
@@ -222,7 +253,7 @@
       }
 
       @descendent footer {
-        margin: 100px 0 30px;
+        margin: 60px 0 20px;
         text-align: center;
         a {
           color: #6edcb2;
@@ -289,14 +320,19 @@
           }
         }
 
-        @descendent show {
+        @descendent left {
+          margin-right: 0;
           width: 90%;
         }
 
         @descendent feature {
           span {
-            font-size: 12px;
+            font-size: 14px;
           }
+        }
+
+        @descendent qrcode {
+          display: none;
         }
 
         @descendent start {
