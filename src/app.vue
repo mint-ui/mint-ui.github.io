@@ -22,15 +22,26 @@
       <div class="page-home-start" :style="{ 'width': smallScreen ? '90%' : '650px' }">
         <code>
           <span class="page-home-comment">// 引入全部组件</span>
-          <span>import Vue from 'vue';</span>
-          <span>import Mint from 'mint-ui';</span>
-          <span>Vue.use(Mint);</span>
+          <span>
+            <span class="pl-k">import </span><span class="pl-smi">Vue </span><span class="pl-k">from </span><span class="pl-s">'vue'</span><span class="pl-smi">;</span>
+          </span>
+          <span>
+            <span class="pl-k">import </span><span class="pl-smi">Mint </span><span class="pl-k">from </span><span class="pl-s">'mint-ui'</span><span class="pl-smi">;</span>
+          </span>
+          <span>
+            <span class="pl-smi">Vue.</span><span class="pl-en">use</span><span class="pl-smi">(Mint);</span>
+          </span>
         </code>
         <code>
           <span class="page-home-comment">// 按需引入部分组件</span>
-          <span>import { Cell, Checklist } from 'mint-ui';</span>
-          <span>Vue.component(Cell.name, Cell);</span>
-          <span>Vue.component(Checklist.name, Checklist);</span>
+          <span>
+            <span class="pl-k">import </span><span class="pl-smi">{ Cell, Checklist } </span><span class="pl-k">from </span><span class="pl-s">'minu-ui'</span><span class="pl-smi">;</span>
+            </span>
+          <span>
+            <span class="pl-smi">Vue.</span><span class="pl-en">component</span><span class="pl-smi">(Cell.name, Cell);</span>
+          </span>
+          <span>
+            <span class="pl-smi">Vue.</span><span class="pl-en">component</span><span class="pl-smi">(Checklist.name, Checklist);</span>
         </code>
       </div>
 
@@ -74,6 +85,8 @@
 </template>
 
 <style>
+  @import "./style/theme-blue.css";
+  
   @reset-global pc;
 
   @keyframes enter {
@@ -97,13 +110,14 @@
 
   html {
     font-size: 62.5%;
+    font-family: "Helvetica Neue", "Microsoft Yahei", sans-serif;
   }
 
   @component-namespace page {
     @component home {
       @descendent jumbotron {
-        background-color: #F0FBF6;
-        padding-bottom: 50px;
+        background-color: var(--color-background);
+        padding-bottom: 30px;
         position: relative;
         text-align: center;
       }
@@ -123,13 +137,13 @@
       @descendent title {
         margin-top: 10px;
         font-size: 30px;
-        color: #18B971;
+        color: var(--color-text);
       }
 
       @descendent desc {
         margin-top: 10px;
         font-size: 20px;
-        color: #18B971;
+        color: var(--color-text);
         opacity: 0;
         &.logo-animate {
           animation: enter .5s forwards;
@@ -137,15 +151,15 @@
       }
 
       @descendent buttons {
-        margin-top: 50px;
+        margin: 30px 0;
         height: 46px;
       }
 
       @descendent button {
         display: inline-block;
-        color: #18B971;
+        color: var(--color-text);
         padding: 10px 40px;
-        border: solid 2px #18B971;
+        border: solid 2px var(--color-text);
         border-radius: 5px;
         font-size: 18px;
         &:first-child {
@@ -153,7 +167,7 @@
         }
         &:hover {
           color: #fff;
-          background-color: #18B971;
+          background-color: var(--color-text);
         }
       }
 
@@ -173,7 +187,7 @@
       @descendent sector {
         margin-top: 40px;
         font-size: 20px;
-        color: #18B971;
+        color: var(--color-text);
         text-align: center;
         @modifier dark {
           padding-top: 20px;
@@ -181,30 +195,41 @@
       }
 
       @descendent start {
-        margin: 10px auto 60px;
+        margin: 40px auto 60px;
         background-color: #f8f8f8;
         border-radius: 8px;
         border: solid 1px #ddd;
-        padding: 15px 15px;
+        padding: 15px;
         code {
           display: block;
           &:first-child {
             margin-bottom: 25px;
           }
-        }
-        span {
-          display: block;
-          color: #53b997;
-          line-height: 20px;
-          &.page-home-comment {
-            color: #719fad;
+          & > span {
+            display: block;
+            line-height: 20px;
+            &.page-home-comment {
+              color: #969896;
+            }
           }
+        }
+        .pl-smi {
+          color: #333;
+        }
+        .pl-k {
+          color: #a71d5d;
+        }
+        .pl-s {
+          color: #183691;
+        }
+        .pl-en {
+          color: #795da3;
         }
       }
 
       @descendent show {
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 40px 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -217,7 +242,8 @@
       @descendent feature {
         display: inline-block;
         li {
-          margin-bottom: 20px;
+          color: #333;
+          margin-bottom: 30px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -225,14 +251,14 @@
         }
         i {
           vertical-align: middle;
-          color: #18B971;
+          color: var(--color-text);
           font-size: 80px;
           display: -webkit-box;
         }
         span {
           flex: 1;
           padding-left: 20px;
-          line-height: 1.4;
+          line-height: 1.6;
           vertical-align: middle;
           font-size: 16px;
           display: -webkit-box;
@@ -256,10 +282,10 @@
         margin: 60px 0 20px;
         text-align: center;
         a {
-          color: #6edcb2;
+          color: var(--color-footer);
           transition: .3s;
           &:hover {
-            color: #18B971;
+            color: var(--color-text);
           }
         }
       }
@@ -275,7 +301,7 @@
     @component-namespace page {
       @component home {
         @descendent jumbotron {
-          padding-bottom: 60px;
+          padding-bottom: 30px;
           position: relative;
         }
 
@@ -297,7 +323,7 @@
         }
 
         @descendent buttons {
-          margin: 50px auto 0;
+          margin: 30px auto;
           width: 90%;
           display: flex;
           justify-content: space-between;
@@ -337,7 +363,6 @@
 
         @descendent start {
           width: 90%;
-          margin-top: 20px;
         }
 
         @descendent phone {
