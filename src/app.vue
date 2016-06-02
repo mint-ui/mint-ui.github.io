@@ -266,6 +266,7 @@
       }
 
       @descendent phone {
+        min-width: 350px;
         display: inline-block;
         width: 350px;
         height: 760px;
@@ -283,10 +284,6 @@
         text-align: center;
         a {
           color: var(--color-footer);
-          transition: .3s;
-          &:hover {
-            color: var(--color-text);
-          }
         }
       }
     }
