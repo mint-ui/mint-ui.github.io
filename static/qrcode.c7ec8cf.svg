@@ -6,7 +6,7 @@
 <defs>
 <rect id="p" width="12" height="12" />
 </defs>
-<g fill="#18B971">
+<g fill="#26a2ff">
 <use x="12" y="12" xlink:href="#p" />
 <use x="24" y="12" xlink:href="#p" />
 <use x="36" y="12" xlink:href="#p" />
