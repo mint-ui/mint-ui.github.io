@@ -9,7 +9,7 @@
         </div>
         <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">基于 Vue.js 的移动端组件库</p>
         <div class="page-home-buttons">
-          <a href="/docs" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>开始使用</span></a>
+          <a href="/docs/#!/zh-cn" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>开始使用</span></a>
           <a href="/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>查看示例</span></a>
         </div>
         <div class="page-home-gitbtn">
