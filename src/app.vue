@@ -10,11 +10,11 @@
         <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">基于 Vue.js 的移动端组件库</p>
         <div class="page-home-buttons">
           <a href="/docs/#!/zh-cn" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>开始使用</span></a>
-          <a href="/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>查看示例</span></a>
+          <a href="//elemefe.github.io/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>查看示例</span></a>
         </div>
         <div class="page-home-gitbtn">
-          <iframe src="https://ghbtns.com/github-btn.html?user=mint-ui&repo=mint-ui&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
-          <iframe src="https://ghbtns.com/github-btn.html?user=mint-ui&repo=mint-ui&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=ElemeFE&repo=mint-ui&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=ElemeFE&repo=mint-ui&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
         </div>
       </div>
 
@@ -73,7 +73,7 @@
         </div>
 
         <div class="page-home-phone" v-if="!smallScreen">
-          <iframe src="//mint-ui.github.io/mint-ui" frameborder="0"></iframe>
+          <iframe src="//elemefe.github.io/mint-ui" frameborder="0"></iframe>
         </div>
       </div>
 
