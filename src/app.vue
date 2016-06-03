@@ -108,8 +108,7 @@
     opacity: 0;
   }
 
-  html {
-    font-size: 62.5%;
+  body {
     font-family: "Helvetica Neue", "Microsoft Yahei", sans-serif;
   }
 
