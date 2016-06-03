@@ -7,9 +7,9 @@ Landing page for mint-ui
 make dev
 ```
 
-## Production
+## Deploy
 ```
-make dist
+make deploy
 ```
 
 ## License
