@@ -17,7 +17,9 @@
           <iframe src="https://ghbtns.com/github-btn.html?user=ElemeFE&repo=mint-ui&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
         </div>
 
-        <lang-button></lang-button>
+        <div class="page-home-lang">
+          <lang-button v-show="descAnimateReady" transition="enter"></lang-button>
+        </div>
       </div>
 
       <p class="page-home-sector">快速开始</p>

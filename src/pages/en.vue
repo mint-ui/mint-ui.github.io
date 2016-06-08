@@ -7,9 +7,9 @@
           <p class="page-home-title">Mint UI</p>
           <p></p>
         </div>
-        <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">Mobile UI elements for vue.js</p>
+        <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">Mobile UI elements for Vue.js</p>
         <div class="page-home-buttons">
-          <a href="/docs/#!/zh-cn" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>Quick Start</span></a>
+          <a href="/docs/#!/zh-cn" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>Documentation</span></a>
           <a href="//elemefe.github.io/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>Demo</span></a>
         </div>
         <div class="page-home-gitbtn">
@@ -17,13 +17,15 @@
           <iframe src="https://ghbtns.com/github-btn.html?user=ElemeFE&repo=mint-ui&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
         </div>
 
-        <lang-button></lang-button>
+        <div class="page-home-lang">
+          <lang-button v-show="descAnimateReady" transition="enter"></lang-button>
+        </div>
       </div>
 
-      <p class="page-home-sector">快速开始</p>
+      <p class="page-home-sector">Quick Start</p>
       <div class="page-home-start" :style="{ 'width': smallScreen ? '90%' : '650px' }">
         <code>
-          <span class="page-home-comment">// 引入全部组件</span>
+          <span class="page-home-comment">// import all components</span>
           <span>
             <span class="pl-k">import </span><span class="pl-smi">Vue </span><span class="pl-k">from </span><span class="pl-s">'vue'</span><span class="pl-smi">;</span>
           </span>
@@ -35,7 +37,7 @@
           </span>
         </code>
         <code>
-          <span class="page-home-comment">// 按需引入部分组件</span>
+          <span class="page-home-comment">// import only on demand</span>
           <span>
             <span class="pl-k">import </span><span class="pl-smi">{ Cell, Checklist } </span><span class="pl-k">from </span><span class="pl-s">'minu-ui'</span><span class="pl-smi">;</span>
             </span>
@@ -47,25 +49,25 @@
         </code>
       </div>
 
-      <p class="page-home-sector page-home-sector--dark">特性介绍</p>
+      <p class="page-home-sector page-home-sector--dark">Features</p>
       <div class="page-home-show">
         <div class="page-home-left">
           <ul class="page-home-feature" :style="{ 'width': smallScreen ? '100%' : '650px' }">
             <li>
               <i class="iconfont icon-zujian"></i>
-              <span>Mint UI 包含丰富的 CSS 和 JS 组件，能够满足日常的移动端开发需要。通过它，可以快速构建出风格统一的页面，提升开发效率。</span>
+              <span>Mint UI provides abundant CSS and JS components for building mobile applications. With it, you can create web pages in cohesive style ever faster.</span>
             </li>
             <li>
               <i class="iconfont icon-anxufufei"></i>
-              <span>真正意义上的按需加载组件。可以只加载声明过的组件及其样式文件，无需再纠结文件体积过大。</span>
+              <span>Load on demand. Importing components and their style sheets only when needed truly liberates you from excessive file sizes.</span>
             </li>
             <li>
               <i class="iconfont icon-xingnengtongji"></i>
-              <span>考虑到移动端的性能门槛，Mint UI 采用 CSS3 处理各种动效，避免浏览器进行不必要的重绘和重排，从而使用户获得流畅顺滑的体验。</span>
+              <span>To avoid unnecessary repaint and reflows, Mint UI handles animations using CSS3, so that users can enjoy smooth motions even on mobile devices.</span>
             </li>
             <li>
               <i class="iconfont icon-shiliangzhinengduixiang9"></i>
-              <span>依托 Vue.js 高效的组件化方案，Mint UI 做到了轻量化。即使全部引入，压缩后的文件体积也仅有 100+ K。</span>
+              <span>Thanks to the efficient component-based approach of Vue.js, Mint UI is pretty light-weight. When all imported, the compressed code takes only 100+ K space.</span>
             </li>
           </ul>
 

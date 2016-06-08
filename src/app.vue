@@ -39,6 +39,11 @@
         text-align: center;
       }
 
+      @descendent lang {
+        margin-top: 20px;
+        height: 16px;
+      }
+
       @descendent logo {
         height: 262px;
         padding-top: 40px;
@@ -75,7 +80,8 @@
       @descendent button {
         display: inline-block;
         color: var(--color-text);
-        padding: 10px 40px;
+        padding: 10px;
+        width: 200px;
         border: solid 2px var(--color-text);
         border-radius: 5px;
         font-size: 18px;

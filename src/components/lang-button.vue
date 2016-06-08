@@ -6,10 +6,6 @@
 </template>
 
 <style lang="css" scoped>
-  .button {
-    margin-top: 20px;
-  }
-
   .link {
     color: #26a2ff;
     padding: 0 10px;
@@ -19,6 +15,7 @@
 
   .link:last-child {
     border-right: 0;
+    padding-right: 30px;
   }
 
   .link:hover {
