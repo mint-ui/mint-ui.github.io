@@ -9,6 +9,7 @@
     <app></app>
     <!-- built files will be auto injected -->
     <script src="//github.elemecdn.com/uglifyjs!vuejs/vue/v1.0.24/dist/vue.js"></script>
+    <script src="//github.elemecdn.com/uglifyjs!vuejs/vue-router/v0.7.13/dist/vue-router.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,7 +18,6 @@
 
       ga('create', 'UA-78766487-1', 'auto');
       ga('send', 'pageview');
-
     </script>
   </body>
 </html>

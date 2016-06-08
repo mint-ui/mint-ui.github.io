@@ -12,7 +12,6 @@ cooking.set({
   devServer: {
     port: 8080,
     publicPath: '/',
-    log: false,
     hostname: require('my-local-ip')()
   },
 
