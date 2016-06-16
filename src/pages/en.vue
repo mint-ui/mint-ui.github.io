@@ -9,7 +9,7 @@
         </div>
         <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">Mobile UI elements for Vue.js</p>
         <div class="page-home-buttons">
-          <a href="/docs/#!/zh-cn" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>Documentation</span></a>
+          <a href="/docs/#!/en" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>Documentation</span></a>
           <a href="//elemefe.github.io/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>Demo</span></a>
         </div>
         <div class="page-home-gitbtn">
