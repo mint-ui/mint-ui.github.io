@@ -67,7 +67,7 @@
             </li>
             <li>
               <i class="iconfont icon-shiliangzhinengduixiang9"></i>
-              <span>Thanks to the efficient component-based approach of Vue.js, Mint UI is pretty light-weight. When all imported, the compressed code takes only 100+ K space.</span>
+              <span>Thanks to the efficient component-based approach of Vue.js, Mint UI is pretty light-weight. When all imported, the compressed code takes only ~25kb (JS + CSS) gzip space.</span>
             </li>
           </ul>
 

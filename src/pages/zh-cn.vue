@@ -67,7 +67,7 @@
             </li>
             <li>
               <i class="iconfont icon-shiliangzhinengduixiang9"></i>
-              <span>依托 Vue.js 高效的组件化方案，Mint UI 做到了轻量化。即使全部引入，压缩后的文件体积也仅有 100+ K。</span>
+              <span>依托 Vue.js 高效的组件化方案，Mint UI 做到了轻量化。即使全部引入，压缩后的文件体积也仅有 ~25kb (JS + CSS) gzip。</span>
             </li>
           </ul>
 
