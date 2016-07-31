@@ -13,8 +13,8 @@
           <a href="//elemefe.github.io/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>Demo</span></a>
         </div>
         <div class="page-home-gitbtn">
-          <iframe src="https://ghbtns.com/github-btn.html?user=ElemeFE&repo=mint-ui&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
-          <iframe src="https://ghbtns.com/github-btn.html?user=ElemeFE&repo=mint-ui&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=ElemeFE&repo=mint-ui&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=ElemeFE&repo=mint-ui&type=fork&count=true" frameborder="0" scrolling="0" width="95px" height="20px" v-show="descAnimateReady" transition="enter"></iframe>
         </div>
 
         <div class="page-home-lang">
