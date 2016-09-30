@@ -9,7 +9,7 @@
         </div>
         <p class="page-home-desc" :class="{ 'logo-animate': descAnimateReady }">基于 Vue.js 的移动端组件库</p>
         <div class="page-home-buttons">
-          <a href="/docs/#!/zh-cn" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>开始使用</span></a>
+          <a href="/docs" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>开始使用</span></a>
           <a href="//elemefe.github.io/mint-ui" class="page-home-button" v-show="descAnimateReady" transition="enter" target="_blank"><span>查看示例</span></a>
         </div>
         <div class="page-home-gitbtn">
@@ -23,6 +23,19 @@
       </div>
 
       <p class="page-home-sector">快速开始</p>
+      <div class="page-home-start" :style="{ 'width': smallScreen ? '90%' : '650px' }">
+        <code>
+          <span class="page-home-comment">// 安装</span>
+          <span class="page-home-comment"># Vue 1.0.x</span>
+          <span>
+            <span class="pl-smi">npm install mint-ui -S</span>
+          </span>
+          <span class="page-home-comment"># Vue 2.0</span>
+          <span>
+            <span class="pl-smi">npm install mint-ui@next -S</span>
+          </span>
+        </code>
+      </div>
       <div class="page-home-start" :style="{ 'width': smallScreen ? '90%' : '650px' }">
         <code>
           <span class="page-home-comment">// 引入全部组件</span>
@@ -90,6 +103,8 @@
 
 <script type="text/babel">
   import '../font/iconfont.css';
+  import { MessageBox } from 'mint-ui';
+  import 'mint-ui/lib/message-box/style.css';
 
   export default {
     data() {
@@ -117,6 +132,15 @@
         this.handleResize();
       });
       this.isMobile = document.body.clientWidth <= 500;
+    },
+
+    ready() {
+      if (!localStorage.getItem('noticed')) {
+        localStorage.setItem('noticed', true);
+        setTimeout(() => {
+          MessageBox.alert('Mint UI 现已支持 Vue 2.0', 'mint-ui@next 已发布！');
+        }, 1000);
+      }
     },
 
     beforeDestroy() {

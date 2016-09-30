@@ -7,6 +7,13 @@
 
   @reset-global pc;
 
+  .msgbox {
+    max-width: 400px;
+  }
+  .msgbox p {
+    line-height: 1.2;
+  }
+
   @keyframes enter {
     0% {
       opacity: 0;
@@ -125,8 +132,9 @@
         padding: 15px;
         code {
           display: block;
+          margin-top: 25px;
           &:first-child {
-            margin-bottom: 25px;
+            margin-top: 0;
           }
           & > span {
             display: block;
