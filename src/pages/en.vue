@@ -26,13 +26,13 @@
       <div class="page-home-start" :style="{ 'width': smallScreen ? '90%' : '650px' }">
         <code>
           <span class="page-home-comment">// install</span>
-          <span class="page-home-comment"># for Vue 1.0.x</span>
+          <span class="page-home-comment"># for Vue 1.x</span>
           <span>
-            <span class="pl-smi">npm install mint-ui -S</span>
+            <span class="pl-smi">npm install mint-ui@1 -S</span>
           </span>
           <span class="page-home-comment"># for Vue 2.0</span>
           <span>
-            <span class="pl-smi">npm install mint-ui@next -S</span>
+            <span class="pl-smi">npm install mint-ui -S</span>
           </span>
         </code>
       </div>
@@ -138,7 +138,7 @@
       if (!localStorage.getItem('noticed')) {
         localStorage.setItem('noticed', true);
         setTimeout(() => {
-          MessageBox.alert('Mint UI now supports Vue 2.0', 'mint-ui@next published!');
+          MessageBox.alert('Mint UI now supports Vue 2.0', 'mint-ui published!');
         }, 1000);
       }
     },
