@@ -52,7 +52,7 @@
         <code>
           <span class="page-home-comment">// import only on demand</span>
           <span>
-            <span class="pl-k">import </span><span class="pl-smi">{ Cell, Checklist } </span><span class="pl-k">from </span><span class="pl-s">'minu-ui'</span><span class="pl-smi">;</span>
+            <span class="pl-k">import </span><span class="pl-smi">{ Cell, Checklist } </span><span class="pl-k">from </span><span class="pl-s">'mint-ui'</span><span class="pl-smi">;</span>
             </span>
           <span>
             <span class="pl-smi">Vue.</span><span class="pl-en">component</span><span class="pl-smi">(Cell.name, Cell);</span>
